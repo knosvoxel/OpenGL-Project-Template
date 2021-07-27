@@ -2,7 +2,7 @@
 Linux Only
 
 It includes GLFW and glad to create basic OpenGL programs
-- glad is configured for OpenGL 3.3
+- glad is configured for OpenGL version 3.3
 
 # Requirements
 - VS Code extensions: C/C++, CMake Tools
