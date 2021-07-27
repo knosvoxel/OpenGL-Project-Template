@@ -8,3 +8,6 @@ It includes GLFW and glad to create basic OpenGL programs
 - VS Code extensions: C/C++, CMake Tools
 - CMake version 3.15 or greater
 - GCC
+
+# Based on this tutorial
+https://github.com/aaronmjacobs/InitGL
