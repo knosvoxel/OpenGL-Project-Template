@@ -11,3 +11,5 @@ It includes GLFW and glad to create basic OpenGL programs
 
 # Based on this tutorial
 https://github.com/aaronmjacobs/InitGL
+
+Adding useful stuff along the way as I follow the tutorial at https://learnopengl.com/
