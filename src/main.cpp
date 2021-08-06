@@ -1,10 +1,14 @@
+#define STB_IMAGE_IMPLEMENTATION
+
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
-#include <learnopengl/shader_s.h>
+#include <shader/shader_s.h>
 
 #include <iostream>
 #include <math.h>
+
+#include "stb_image/stb_image.h"
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow* window);
