@@ -1,7 +1,8 @@
 # OpenGL-Project-Template for use with CMake in VS Code 
-Works on both Linux and Windows. 
-Optimized for Linux though as Visual Studio struggles with the relative paths in main.cpp on Windows.
-I recommend using VS Code on Linux and VS Community on Windows
+- Works on both Linux and Windows. 
+- For Windows: in main.cpp uncomment the line where we create the Shader ourShader and comment the line for Linux
+- Recommended software: Linux: Visual Studio Code / Windows: Visual Studio Community
+
 
 It includes GLFW and glad to create basic OpenGL programs
 - glad is configured for OpenGL version 3.3
