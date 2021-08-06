@@ -49,7 +49,10 @@ int main()
 
    // build and compile our shader program
    // ---------------------------------------
+   //Linux
    Shader ourShader("../shaders/learnopengl/3.3.shader.vs", "../shaders/learnopengl/3.3.shader.fs");
+   //Windows
+   //Shader ourShader("../../../shaders/learnopengl/3.3.shader.vs", "../../../shaders/learnopengl/3.3.shader.fs");
 
    //set up vertex data (and buffer(s)) and configure vertex attributes
    //-----------------------------------------------------------------
