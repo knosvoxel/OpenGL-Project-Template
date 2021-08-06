@@ -4,8 +4,9 @@ project(OpenGL-Project-Template)
 
 # Source files
 set(SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src")
-set(LIB_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libaries")
+set(LIB_DIR "${CMAKE_CURRENT_SOURCE_DIR}/lib")
 set(INCL_DIR "${CMAKE_CURRENT_SOURCE_DIR}/include")
+set(RES_DIR "${CMAKE_CURRENT_SOURCE_DIR}/res")
 set(SOURCES "${SRC_DIR}/main.cpp")
 
 # Executable definition and properties
@@ -33,3 +34,4 @@ target_link_libraries(${PROJECT_NAME} "glad" "${CMAKE_DL_LIBS}")
 
 # include folder
 target_include_directories(${PROJECT_NAME} PRIVATE "${INCL_DIR}")
+target_include_directories(${PROJECT_NAME} PRIVATE "${RES_DIR}")
