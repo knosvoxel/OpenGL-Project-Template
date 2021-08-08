@@ -1,6 +1,5 @@
 # OpenGL-Project-Template for use with CMake in VS Code 
 - Works on both Linux and Windows. 
-- For Windows: in main.cpp uncomment the line where we create the Shader ourShader and comment the line for Linux
 - Recommended software: Linux: Visual Studio Code / Windows: Visual Studio Community
 
 
