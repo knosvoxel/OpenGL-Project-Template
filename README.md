@@ -1,4 +1,4 @@
-# OpenGL-Project-Template for use with CMake in VS Code 
+# OpenGL-Project-Template for use with CMake
 - Works on both Linux and Windows. 
 - Recommended software: Linux: Visual Studio Code / Windows: Visual Studio Community
 
