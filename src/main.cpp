@@ -10,16 +10,17 @@
 
 #include "stb_image/stb_image.h"
 
+// forward declarations
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow* window);
 
-//settings
+// settings
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
 
 int main()
 {
-   //glfw: initialize and configure
+   // glfw: initialize and configure
    glfwInit();
    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
@@ -29,7 +30,7 @@ int main()
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 #endif
 
-   //glfw window creation
+   // glfw window creation
    GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "LearnOpenGL", nullptr,nullptr);
    if(window == nullptr)
    {
@@ -40,7 +41,7 @@ int main()
    glfwMakeContextCurrent(window);
    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
-   //glad: load all OpenGL function pointers
+   // glad: load all OpenGL function pointers
    if(!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
    {
       std::cout << "Failed to initialize GLAD" << std::endl;
@@ -51,7 +52,7 @@ int main()
    // ---------------------------------------
    Shader ourShader("../shaders/learnopengl/3.3.shader.vs", "../shaders/learnopengl/3.3.shader.fs");
    
-   //set up vertex data (and buffer(s)) and configure vertex attributes
+   // set up vertex data (and buffer(s)) and configure vertex attributes
    //-----------------------------------------------------------------
    float vertices[]{
       // positions       // colors
@@ -63,7 +64,7 @@ int main()
    unsigned int VBO, VAO;
    glGenVertexArrays(1, &VAO);
    glGenBuffers(1, &VBO);
-   //bind the Vertes Arrays Object first, then bind and set vertex buffer(s), and then configure vertex attributes(s).
+   // bind the Vertes Arrays Object first, then bind and set vertex buffer(s), and then configure vertex attributes(s).
    glBindVertexArray(VAO);
 
    glBindBuffer(GL_ARRAY_BUFFER, VBO);
@@ -80,25 +81,25 @@ int main()
     // uncomment this call to draw in wireframe polygons.
     //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
-   //render loop
+   // render loop
    //----------------------------------------
    while(!glfwWindowShouldClose(window))
    {
       // input
       processInput(window);
       
-      //render
+      // render
       glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
       glClear(GL_COLOR_BUFFER_BIT);
 
       ourShader.use();
 
-      //draws the triangle
+      // draws the triangle
       glBindVertexArray(VAO); //not necessary here because we only have a single VAO but doing it anyway to keep things more organized
       glDrawArrays(GL_TRIANGLES, 0, 3);
       //glBindVertexArray(0); //no need to unbind it every time
 
-      //glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
+      // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
       //------------------------------------------
       glfwSwapBuffers(window);
       glfwPollEvents();
@@ -109,21 +110,21 @@ int main()
     glDeleteVertexArrays(1, &VAO);
     glDeleteBuffers(1, &VBO);
 
-   //glfw: terminate, clearing all previously allocated GLFW resources
+   // glfw: terminate, clearing all previously allocated GLFW resources
    //---------------------------------------------------
    glfwTerminate();
 
    return 0;
 }
 
-//called every loop to check whether ESC is pressed. If that's the case the window closes
+// called every loop to check whether ESC is pressed. If that's the case the window closes
 void processInput(GLFWwindow *window)
 {
    if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
       glfwSetWindowShouldClose(window,true);
 }
 
-//checks whether the window has changed size to adjust the viewport too
+// checks whether the window has changed size to adjust the viewport too
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
    glViewport(0,0, width, height);
