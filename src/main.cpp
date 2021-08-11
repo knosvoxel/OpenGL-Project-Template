@@ -52,6 +52,11 @@ int main()
       return -1;
    }
 
+   // configure global opengl state
+   // -------------------------------------------
+   glEnable(GL_DEPTH_TEST);
+
+
    // build and compile our shader program
    // ---------------------------------------
    Shader ourShader("../shaders/learnopengl/3.3.shader.vs", "../shaders/learnopengl/3.3.shader.fs");
