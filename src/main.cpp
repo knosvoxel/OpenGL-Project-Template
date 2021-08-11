@@ -3,7 +3,7 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
-#include <shader/shader_s.h>
+#include <shader/shader.h>
 
 #include <iostream>
 #include <math.h>
