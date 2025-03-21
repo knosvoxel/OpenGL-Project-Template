@@ -26,8 +26,8 @@ int main()
 {
    // glfw: initialize and configure
    glfwInit();
-   glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-   glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+   glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
+   glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 6);
    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
 #ifdef __APPLE__
@@ -59,7 +59,7 @@ int main()
 
    // build and compile our shader program
    // ---------------------------------------
-   Shader ourShader("../shaders/learnopengl/3.3.shader.vs", "../shaders/learnopengl/3.3.shader.fs");
+   Shader ourShader("../shaders/learnopengl/4.6.shader.vs", "../shaders/learnopengl/4.6.shader.fs");
    
    // set up vertex data (and buffer(s)) and configure vertex attributes
    //-----------------------------------------------------------------
