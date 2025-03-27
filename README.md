@@ -8,7 +8,7 @@ It includes GLFW and glad to create basic OpenGL programs
 
 # Requirements
 - VS Code extensions: C/C++, CMake Tools
-- CMake version 4.0 or greater
+- CMake version 3.1 or greater
 - GCC
 
 # Based on this tutorial
