@@ -4,11 +4,11 @@
 
 
 It includes GLFW and glad to create basic OpenGL programs
-- glad is configured for OpenGL version 3.3
+- glad is configured for OpenGL version 4.6
 
 # Requirements
 - VS Code extensions: C/C++, CMake Tools
-- CMake version 3.15 or greater
+- CMake version 4.0 or greater
 - GCC
 
 # Based on this tutorial
